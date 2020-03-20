@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2020.02-g2847541 Configuration
+# Buildroot 2020.02-ga2ebce2-dirty Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_9=y
@@ -695,7 +695,7 @@ BR2_PACKAGE_CMAKE_ARCH_SUPPORTS=y
 # BR2_PACKAGE_FLEX is not set
 # BR2_PACKAGE_GETTEXT is not set
 BR2_PACKAGE_PROVIDES_HOST_GETTEXT="host-gettext-tiny"
-BR2_PACKAGE_GIT=y
+# BR2_PACKAGE_GIT is not set
 
 #
 # git-crypt needs a toolchain w/ C++, gcc >= 4.9
