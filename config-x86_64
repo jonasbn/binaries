@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2020.02-g8b6d732 Configuration
+# Buildroot 2020.02-g4221536 Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_9=y
@@ -3149,7 +3149,7 @@ BR2_PACKAGE_EFIVAR_ARCH_SUPPORTS=y
 #
 # BR2_PACKAGE_FTOP is not set
 # BR2_PACKAGE_GETENT is not set
-# BR2_PACKAGE_HTOP is not set
+BR2_PACKAGE_HTOP=y
 BR2_PACKAGE_INITSCRIPTS=y
 
 #
