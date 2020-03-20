@@ -11,5 +11,9 @@ secrets:
 tasks:
   - build: |
       cd binaries
-      ./build.sh
+      ./build.sh -b x86_64
+
+  - deploy: |
+      cd binaries
+      ./build.sh -d x86_64
 
