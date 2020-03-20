@@ -2,6 +2,7 @@ image: archlinux
 packages:
   - wget
   - unzip
+  - curl
 secrets:
   - 0d06436c-bc8f-4f65-af13-cad62d4f1127
 

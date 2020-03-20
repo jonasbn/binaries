@@ -1,13 +1,18 @@
 #!/bin/bash
 
-if [[ -d "buildroot" ]]; then
+VERSION="2020.02"
+FOLDER="buildroot-$VERSION"
+DOWNLOAD_URL="https://buildroot.org/downloads/buildroot-$VERSION.tar.gz"
+
+if [[ -d "$FOLDER" ]]; then
     rm -rf buildroot
 fi
 
-git clone https://git.buildroot.net/buildroot
+curl -LO "$DOWNLOAD_URL"
+tar xf "$(basename $DOWNLOAD_URL)"
 
 cp config-x86_64 buildroot/.config
-cd buildroot
+cd "$FOLDER"
 
 make -j$(nproc)
 
