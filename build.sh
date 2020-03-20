@@ -26,7 +26,7 @@ build() {
 
 deploy() {
     local arch="$1"
-    local tarball="$arch-$(+%F).tar.gz"
+    local tarball="$arch-$(date +%F).tar.gz"
 
     rsync -e "ssh -o VerifyHostKeyDNS=yes -o StrictHostKeyChecking=accept-new" -rP --delete "$FOLDER/output/target/" "deploy@batuu.sevenbyte.org:binaries.rumpelsepp.org/$arch"
 
