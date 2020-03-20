@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2020.02-g5003498 Configuration
+# Buildroot 2020.02-g8b6d732 Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_9=y
@@ -483,19 +483,19 @@ BR2_PACKAGE_PULSEAUDIO_HAS_ATOMIC=y
 #
 # Compressors and decompressors
 #
-# BR2_PACKAGE_BROTLI is not set
-# BR2_PACKAGE_BZIP2 is not set
-# BR2_PACKAGE_LRZIP is not set
-# BR2_PACKAGE_LZ4 is not set
-# BR2_PACKAGE_LZIP is not set
-# BR2_PACKAGE_LZOP is not set
-# BR2_PACKAGE_P7ZIP is not set
-# BR2_PACKAGE_PIGZ is not set
-# BR2_PACKAGE_PIXZ is not set
-# BR2_PACKAGE_UNRAR is not set
-# BR2_PACKAGE_XZ is not set
-# BR2_PACKAGE_ZIP is not set
-# BR2_PACKAGE_ZSTD is not set
+BR2_PACKAGE_BROTLI=y
+BR2_PACKAGE_BZIP2=y
+BR2_PACKAGE_LRZIP=y
+BR2_PACKAGE_LZ4=y
+BR2_PACKAGE_LZIP=y
+BR2_PACKAGE_LZOP=y
+BR2_PACKAGE_P7ZIP=y
+BR2_PACKAGE_PIGZ=y
+BR2_PACKAGE_PIXZ=y
+BR2_PACKAGE_UNRAR=y
+BR2_PACKAGE_XZ=y
+BR2_PACKAGE_ZIP=y
+BR2_PACKAGE_ZSTD=y
 
 #
 # Debugging, profiling and benchmark
@@ -1368,14 +1368,17 @@ BR2_PACKAGE_WEBRTC_AUDIO_PROCESSING_ARCH_SUPPORTS=y
 #
 # Compression and decompression
 #
-# BR2_PACKAGE_LIBARCHIVE is not set
+BR2_PACKAGE_LIBARCHIVE=y
+# BR2_PACKAGE_LIBARCHIVE_BSDTAR is not set
+# BR2_PACKAGE_LIBARCHIVE_BSDCPIO is not set
+# BR2_PACKAGE_LIBARCHIVE_BSDCAT is not set
 # BR2_PACKAGE_LIBMSPACK is not set
 # BR2_PACKAGE_LIBSQUISH is not set
 
 #
 # libzip needs a toolchain w/ dynamic library
 #
-# BR2_PACKAGE_LZO is not set
+BR2_PACKAGE_LZO=y
 # BR2_PACKAGE_MINIZIP is not set
 # BR2_PACKAGE_SNAPPY is not set
 # BR2_PACKAGE_SZIP is not set
@@ -2297,7 +2300,7 @@ BR2_PACKAGE_LIBEASTL_ARCH_SUPPORTS=y
 # BR2_PACKAGE_LIBEE is not set
 # BR2_PACKAGE_LIBEV is not set
 # BR2_PACKAGE_LIBEVDEV is not set
-# BR2_PACKAGE_LIBEVENT is not set
+BR2_PACKAGE_LIBEVENT=y
 # BR2_PACKAGE_LIBFFI is not set
 # BR2_PACKAGE_LIBGEE is not set
 # BR2_PACKAGE_LIBGLIB2 is not set
@@ -3060,7 +3063,7 @@ BR2_PACKAGE_XENOMAI_COBALT_ARCH_SUPPORTS=y
 # Shells
 #
 # BR2_PACKAGE_MKSH is not set
-# BR2_PACKAGE_ZSH is not set
+BR2_PACKAGE_ZSH=y
 
 #
 # Utilities
@@ -3086,14 +3089,14 @@ BR2_PACKAGE_XENOMAI_COBALT_ARCH_SUPPORTS=y
 #
 # ranger needs a toolchain w/ wchar, threads, dynamic library
 #
-# BR2_PACKAGE_SCREEN is not set
+BR2_PACKAGE_SCREEN=y
 # BR2_PACKAGE_SUDO is not set
 
 #
 # time needs a toolchain w/ dynamic library
 #
 # BR2_PACKAGE_TINI is not set
-# BR2_PACKAGE_TMUX is not set
+BR2_PACKAGE_TMUX=y
 # BR2_PACKAGE_XMLSTARLET is not set
 # BR2_PACKAGE_XXHASH is not set
 # BR2_PACKAGE_YTREE is not set
