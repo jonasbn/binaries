@@ -11,7 +11,7 @@ fi
 curl -LO "$DOWNLOAD_URL"
 tar xf "$(basename $DOWNLOAD_URL)"
 
-cp config-x86_64 buildroot/.config
+cp config-x86_64 "$FOLDER/.config"
 cd "$FOLDER"
 
 make -j$(nproc)
