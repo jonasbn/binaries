@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2020.02-g1830087 Configuration
+# Buildroot 2020.02-g9163f0f Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_9=y
@@ -210,6 +210,7 @@ BR2_PACKAGE_HOST_GDB_ARCH_SUPPORTS=y
 # Host GDB Options
 #
 # BR2_PACKAGE_HOST_GDB is not set
+BR2_GDB_VERSION="8.2.1"
 
 #
 # Toolchain Generic Options
@@ -536,7 +537,10 @@ BR2_PACKAGE_DIEHARDER=y
 # fwts needs a glibc toolchain w/ wchar, threads
 #
 BR2_PACKAGE_GDB_ARCH_SUPPORTS=y
-# BR2_PACKAGE_GDB is not set
+BR2_PACKAGE_GDB=y
+BR2_PACKAGE_GDB_SERVER=y
+BR2_PACKAGE_GDB_DEBUGGER=y
+BR2_PACKAGE_GDB_TUI=y
 BR2_PACKAGE_GOOGLE_BREAKPAD_ARCH_SUPPORTS=y
 
 #
