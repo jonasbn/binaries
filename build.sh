@@ -2,7 +2,7 @@
 
 set -eu
 
-VERSION="2020.02"
+VERSION="2021.02"
 FOLDER="buildroot-$VERSION"
 DOWNLOAD_URL="https://buildroot.org/downloads/buildroot-$VERSION.tar.gz"
 
@@ -21,12 +21,14 @@ build() {
     cp "config-$arch" "$FOLDER/.config"
     cd "$FOLDER"
 
-    make -j$(nproc)
+    make -j "$(nproc)"
 }
 
 deploy() {
-    local arch="$1"
-    local tarball="$arch-$(date +%F).tar.gz"
+    local arch
+    local tarball
+    arch="$1"
+    tarball="$arch-$(date +%F).tar.gz"
 
     rsync -e "ssh -o VerifyHostKeyDNS=yes -o StrictHostKeyChecking=accept-new" -rP --delete "$FOLDER/output/target/" "deploy@batuu.sevenbyte.org:binaries.rumpelsepp.org/$arch"
 
@@ -35,7 +37,8 @@ deploy() {
 }
 
 usage() {
-    local SCRIPTNAME=$(basename "$0")
+    local SCRIPTNAME
+    SCRIPTNAME=$(basename "$0")
 
     echo "usage: $SCRIPTNAME [-b ARCH] [-d ARCH] [-gh]"
     echo ""
