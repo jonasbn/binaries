@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot -g4ce060a-dirty Configuration
+# Buildroot -gdffe9e2 Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_9=y
@@ -224,6 +224,7 @@ BR2_PACKAGE_HOST_GDB_ARCH_SUPPORTS=y
 # Host GDB Options
 #
 # BR2_PACKAGE_HOST_GDB is not set
+BR2_GDB_VERSION="9.2"
 
 #
 # Toolchain Generic Options
@@ -495,18 +496,18 @@ BR2_PACKAGE_PULSEAUDIO_HAS_ATOMIC=y
 #
 # Compressors and decompressors
 #
-# BR2_PACKAGE_BROTLI is not set
-# BR2_PACKAGE_BZIP2 is not set
-# BR2_PACKAGE_LRZIP is not set
-# BR2_PACKAGE_LZIP is not set
-# BR2_PACKAGE_LZOP is not set
-# BR2_PACKAGE_P7ZIP is not set
-# BR2_PACKAGE_PIGZ is not set
-# BR2_PACKAGE_PIXZ is not set
-# BR2_PACKAGE_UNRAR is not set
-# BR2_PACKAGE_XZ is not set
-# BR2_PACKAGE_ZIP is not set
-# BR2_PACKAGE_ZSTD is not set
+BR2_PACKAGE_BROTLI=y
+BR2_PACKAGE_BZIP2=y
+BR2_PACKAGE_LRZIP=y
+BR2_PACKAGE_LZIP=y
+BR2_PACKAGE_LZOP=y
+BR2_PACKAGE_P7ZIP=y
+BR2_PACKAGE_PIGZ=y
+BR2_PACKAGE_PIXZ=y
+BR2_PACKAGE_UNRAR=y
+BR2_PACKAGE_XZ=y
+BR2_PACKAGE_ZIP=y
+BR2_PACKAGE_ZSTD=y
 
 #
 # Debugging, profiling and benchmark
@@ -552,7 +553,9 @@ BR2_PACKAGE_DELVE_ARCH_SUPPORTS=y
 # fwts needs a glibc toolchain w/ wchar, threads, dynamic library
 #
 BR2_PACKAGE_GDB_ARCH_SUPPORTS=y
-# BR2_PACKAGE_GDB is not set
+BR2_PACKAGE_GDB=y
+BR2_PACKAGE_GDB_SERVER=y
+# BR2_PACKAGE_GDB_DEBUGGER is not set
 BR2_PACKAGE_GOOGLE_BREAKPAD_ARCH_SUPPORTS=y
 
 #
@@ -616,7 +619,7 @@ BR2_PACKAGE_OPROFILE_ARCH_SUPPORTS=y
 # sentry-native needs a glibc toolchain with w/ wchar, thread, C++, gcc >= 4.8
 #
 # BR2_PACKAGE_SPIDEV_TEST is not set
-# BR2_PACKAGE_STRACE is not set
+BR2_PACKAGE_STRACE=y
 # BR2_PACKAGE_STRESS is not set
 # BR2_PACKAGE_STRESS_NG is not set
 
@@ -646,7 +649,8 @@ BR2_PACKAGE_VALGRIND_ARCH_SUPPORTS=y
 #
 # Development tools
 #
-# BR2_PACKAGE_BINUTILS is not set
+BR2_PACKAGE_BINUTILS=y
+BR2_PACKAGE_BINUTILS_TARGET=y
 # BR2_PACKAGE_BITWISE is not set
 # BR2_PACKAGE_BSDIFF is not set
 # BR2_PACKAGE_CHECK is not set
@@ -666,19 +670,19 @@ BR2_PACKAGE_CMAKE_ARCH_SUPPORTS=y
 # BR2_PACKAGE_FLEX is not set
 # BR2_PACKAGE_GETTEXT is not set
 BR2_PACKAGE_PROVIDES_HOST_GETTEXT="host-gettext-tiny"
-# BR2_PACKAGE_GIT is not set
+BR2_PACKAGE_GIT=y
 # BR2_PACKAGE_GIT_CRYPT is not set
 # BR2_PACKAGE_GPERF is not set
 # BR2_PACKAGE_JO is not set
-# BR2_PACKAGE_JQ is not set
+BR2_PACKAGE_JQ=y
 # BR2_PACKAGE_LIBTOOL is not set
-# BR2_PACKAGE_MAKE is not set
+BR2_PACKAGE_MAKE=y
 # BR2_PACKAGE_PKGCONF is not set
 
 #
 # subversion needs a toolchain w/ dynamic library
 #
-# BR2_PACKAGE_TREE is not set
+BR2_PACKAGE_TREE=y
 # BR2_PACKAGE_YASM is not set
 
 #
@@ -1322,7 +1326,226 @@ BR2_PACKAGE_OPENJDK_ARCH_SUPPORTS=y
 #
 # openjdk needs glibc, and a toolchain w/ wchar, dynamic library, threads, C++, gcc >= 4.9
 #
-# BR2_PACKAGE_PERL is not set
+BR2_PACKAGE_PERL=y
+BR2_PACKAGE_PERL_MODULES=""
+# BR2_PACKAGE_PERL_THREADS is not set
+
+#
+# Perl libraries/modules
+#
+# BR2_PACKAGE_PERL_APACHE_LOGFORMAT_COMPILER is not set
+# BR2_PACKAGE_PERL_APPCONFIG is not set
+# BR2_PACKAGE_PERL_ASTRO_SUNTIME is not set
+# BR2_PACKAGE_PERL_CLASS_INSPECTOR is not set
+
+#
+# perl-class-load needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_CLASS_METHOD_MODIFIERS is not set
+# BR2_PACKAGE_PERL_CLASS_STD is not set
+# BR2_PACKAGE_PERL_CLASS_STD_FAST is not set
+# BR2_PACKAGE_PERL_CONVERT_ASN1 is not set
+# BR2_PACKAGE_PERL_COOKIE_BAKER is not set
+
+#
+# perl-crypt-blowfish needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_CRYPT_CBC is not set
+
+#
+# perl-crypt-openssl-aes needs a toolchain w/ dynamic library
+#
+
+#
+# perl-crypt-openssl-random needs a toolchain w/ dynamic library
+#
+
+#
+# perl-crypt-openssl-rsa needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_DATA_DUMP is not set
+
+#
+# perl-data-optlist needs a toolchain w/ dynamic library
+#
+
+#
+# perl-data-uuid needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_DATE_MANIP is not set
+# BR2_PACKAGE_PERL_DATETIME_TINY is not set
+
+#
+# perl-dbd-mysql needs a toolchain w/ dynamic library, C++, threads
+#
+
+#
+# perl-dbi needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_DEVEL_CYCLE is not set
+# BR2_PACKAGE_PERL_DEVEL_GLOBALDESTRUCTION is not set
+
+#
+# perl-devel-size needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_DEVEL_STACKTRACE is not set
+# BR2_PACKAGE_PERL_DEVEL_STACKTRACE_ASHTML is not set
+
+#
+# perl-device-serialport needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_DIGEST_HMAC is not set
+
+#
+# perl-digest-sha1 needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_DIST_CHECKCONFLICTS is not set
+
+#
+# perl-encode-detect needs a toolchain w/ C++, dynamic library
+#
+# BR2_PACKAGE_PERL_ENCODE_LOCALE is not set
+# BR2_PACKAGE_PERL_EXPORTER_TINY is not set
+# BR2_PACKAGE_PERL_FILE_LISTING is not set
+# BR2_PACKAGE_PERL_FILE_SHAREDIR is not set
+# BR2_PACKAGE_PERL_FILE_SLURP is not set
+# BR2_PACKAGE_PERL_FILE_UTIL is not set
+# BR2_PACKAGE_PERL_FILESYS_NOTIFY_SIMPLE is not set
+
+#
+# perl-gd needs a toolchain w/ dynamic library
+#
+
+#
+# perl-gdgraph needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_GDTEXTUTIL is not set
+# BR2_PACKAGE_PERL_HASH_MULTIVALUE is not set
+
+#
+# perl-html-parser needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_HTML_TAGSET is not set
+# BR2_PACKAGE_PERL_HTTP_COOKIES is not set
+# BR2_PACKAGE_PERL_HTTP_DAEMON is not set
+# BR2_PACKAGE_PERL_HTTP_DATE is not set
+# BR2_PACKAGE_PERL_HTTP_ENTITY_PARSER is not set
+# BR2_PACKAGE_PERL_HTTP_HEADERS_FAST is not set
+# BR2_PACKAGE_PERL_HTTP_MESSAGE is not set
+# BR2_PACKAGE_PERL_HTTP_MULTIPARTPARSER is not set
+# BR2_PACKAGE_PERL_HTTP_NEGOTIATE is not set
+# BR2_PACKAGE_PERL_I18N is not set
+# BR2_PACKAGE_PERL_IO_HTML is not set
+
+#
+# perl-io-interface needs a toolchain w/ dynamic library
+#
+
+#
+# perl-io-socket-multicast needs a toolchain w/ dynamic library
+#
+
+#
+# perl-io-socket-ssl needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_JSON_MAYBEXS is not set
+# BR2_PACKAGE_PERL_JSON_TINY is not set
+
+#
+# perl-libwww-perl needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_LOCALE_MAKETEXT_LEXICON is not set
+# BR2_PACKAGE_PERL_LWP_MEDIATYPES is not set
+
+#
+# perl-lwp-protocol-https needs a toolchain w/ dynamic library
+#
+
+#
+# perl-mail-dkim needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_MAILTOOLS is not set
+
+#
+# perl-math-int64 needs a toolchain w/ dynamic library
+#
+
+#
+# perl-math-prime-util needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_MIME_BASE64_URLSAFE is not set
+# BR2_PACKAGE_PERL_MIME_TOOLS is not set
+# BR2_PACKAGE_PERL_MODULE_IMPLEMENTATION is not set
+# BR2_PACKAGE_PERL_MODULE_RUNTIME is not set
+# BR2_PACKAGE_PERL_MOJOLICIOUS is not set
+# BR2_PACKAGE_PERL_MOJOLICIOUS_PLUGIN_AUTHENTICATION is not set
+# BR2_PACKAGE_PERL_MOJOLICIOUS_PLUGIN_AUTHORIZATION is not set
+# BR2_PACKAGE_PERL_MOJOLICIOUS_PLUGIN_CSPHEADER is not set
+# BR2_PACKAGE_PERL_MOJOLICIOUS_PLUGIN_I18N is not set
+# BR2_PACKAGE_PERL_MOJOLICIOUS_PLUGIN_SECURITYHEADER is not set
+# BR2_PACKAGE_PERL_MOO is not set
+# BR2_PACKAGE_PERL_MOZILLA_CA is not set
+# BR2_PACKAGE_PERL_NET_DNS is not set
+# BR2_PACKAGE_PERL_NET_HTTP is not set
+# BR2_PACKAGE_PERL_NET_SNMP is not set
+
+#
+# perl-net-ssh2 needs a toolchain w/ dynamic library
+#
+
+#
+# perl-net-ssh2 needs libssh2 with OpenSSL or Libgcrypt backend
+#
+
+#
+# perl-net-ssleay needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_NET_TELNET is not set
+# BR2_PACKAGE_PERL_NETADDR_IP is not set
+# BR2_PACKAGE_PERL_NUMBER_BYTES_HUMAN is not set
+# BR2_PACKAGE_PERL_PACKAGE_STASH is not set
+
+#
+# perl-params-util needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_PATH_TINY is not set
+# BR2_PACKAGE_PERL_PLACK is not set
+# BR2_PACKAGE_PERL_POSIX_STRFTIME_COMPILER is not set
+# BR2_PACKAGE_PERL_ROLE_TINY is not set
+# BR2_PACKAGE_PERL_STREAM_BUFFERED is not set
+# BR2_PACKAGE_PERL_SUB_EXPORTER_PROGRESSIVE is not set
+# BR2_PACKAGE_PERL_SUB_INSTALL is not set
+# BR2_PACKAGE_PERL_SUB_QUOTE is not set
+
+#
+# perl-sys-cpu needs a toolchain w/ dynamic library
+#
+
+#
+# perl-sys-meminfo needs a toolchain w/ dynamic library
+#
+
+#
+# perl-sys-mmap needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_TIME_PARSEDATE is not set
+# BR2_PACKAGE_PERL_TIMEDATE is not set
+# BR2_PACKAGE_PERL_TRY_TINY is not set
+# BR2_PACKAGE_PERL_TYPE_TINY is not set
+# BR2_PACKAGE_PERL_URI is not set
+# BR2_PACKAGE_PERL_WWW_FORM_URLENCODED is not set
+# BR2_PACKAGE_PERL_WWW_ROBOTRULES is not set
+
+#
+# perl-x10 needs a toolchain w/ dynamic library
+#
+
+#
+# perl-xml-libxml needs a toolchain w/ dynamic library
+#
+# BR2_PACKAGE_PERL_XML_NAMESPACESUPPORT is not set
+# BR2_PACKAGE_PERL_XML_SAX is not set
+# BR2_PACKAGE_PERL_XML_SAX_BASE is not set
 # BR2_PACKAGE_PHP is not set
 
 #
@@ -1423,7 +1646,10 @@ BR2_PACKAGE_WEBRTC_AUDIO_PROCESSING_ARCH_SUPPORTS=y
 #
 # Compression and decompression
 #
-# BR2_PACKAGE_LIBARCHIVE is not set
+BR2_PACKAGE_LIBARCHIVE=y
+# BR2_PACKAGE_LIBARCHIVE_BSDTAR is not set
+# BR2_PACKAGE_LIBARCHIVE_BSDCPIO is not set
+# BR2_PACKAGE_LIBARCHIVE_BSDCAT is not set
 # BR2_PACKAGE_LIBMSPACK is not set
 # BR2_PACKAGE_LIBSQUISH is not set
 
@@ -1431,7 +1657,7 @@ BR2_PACKAGE_WEBRTC_AUDIO_PROCESSING_ARCH_SUPPORTS=y
 # libzip needs a toolchain w/ dynamic library
 #
 # BR2_PACKAGE_LZ4 is not set
-# BR2_PACKAGE_LZO is not set
+BR2_PACKAGE_LZO=y
 # BR2_PACKAGE_MINIZIP is not set
 # BR2_PACKAGE_SNAPPY is not set
 # BR2_PACKAGE_SZIP is not set
@@ -2109,7 +2335,14 @@ BR2_PACKAGE_CANFESTIVAL_ARCH_SUPPORTS=y
 # BR2_PACKAGE_LIBCGICC is not set
 # BR2_PACKAGE_LIBCOAP is not set
 # BR2_PACKAGE_LIBCPPRESTSDK is not set
-# BR2_PACKAGE_LIBCURL is not set
+BR2_PACKAGE_LIBCURL=y
+BR2_PACKAGE_LIBCURL_CURL=y
+BR2_PACKAGE_LIBCURL_VERBOSE=y
+BR2_PACKAGE_LIBCURL_PROXY_SUPPORT=y
+BR2_PACKAGE_LIBCURL_COOKIES_SUPPORT=y
+BR2_PACKAGE_LIBCURL_EXTRA_PROTOCOLS_FEATURES=y
+BR2_PACKAGE_LIBCURL_OPENSSL=y
+# BR2_PACKAGE_LIBCURL_TLS_NONE is not set
 # BR2_PACKAGE_LIBDNET is not set
 # BR2_PACKAGE_LIBEXOSIP2 is not set
 # BR2_PACKAGE_LIBFCGI is not set
@@ -2136,7 +2369,7 @@ BR2_PACKAGE_CANFESTIVAL_ARCH_SUPPORTS=y
 #
 # libminiupnpc needs a toolchain w/ dynamic library
 #
-# BR2_PACKAGE_LIBMNL is not set
+BR2_PACKAGE_LIBMNL=y
 # BR2_PACKAGE_LIBMODBUS is not set
 
 #
@@ -2152,14 +2385,15 @@ BR2_PACKAGE_CANFESTIVAL_ARCH_SUPPORTS=y
 #
 # libnetconf2 needs a toolchain w/ threads, dynamic libraray
 #
-# BR2_PACKAGE_LIBNETFILTER_ACCT is not set
-# BR2_PACKAGE_LIBNETFILTER_CONNTRACK is not set
-# BR2_PACKAGE_LIBNETFILTER_CTHELPER is not set
-# BR2_PACKAGE_LIBNETFILTER_CTTIMEOUT is not set
-# BR2_PACKAGE_LIBNETFILTER_LOG is not set
-# BR2_PACKAGE_LIBNETFILTER_QUEUE is not set
-# BR2_PACKAGE_LIBNFNETLINK is not set
-# BR2_PACKAGE_LIBNFTNL is not set
+BR2_PACKAGE_LIBNETFILTER_ACCT=y
+BR2_PACKAGE_LIBNETFILTER_CONNTRACK=y
+BR2_PACKAGE_LIBNETFILTER_CTHELPER=y
+BR2_PACKAGE_LIBNETFILTER_CTTIMEOUT=y
+BR2_PACKAGE_LIBNETFILTER_LOG=y
+BR2_PACKAGE_LIBNETFILTER_QUEUE=y
+BR2_PACKAGE_LIBNFNETLINK=y
+BR2_PACKAGE_LIBNFTNL=y
+# BR2_PACKAGE_LIBNFTNL_JSON is not set
 
 #
 # libnice needs a toolchain w/ wchar, threads, dynamic library
@@ -2730,7 +2964,14 @@ BR2_PACKAGE_WINE_ARCH_SUPPORTS=y
 # BR2_PACKAGE_DHCPDUMP is not set
 # BR2_PACKAGE_DNSMASQ is not set
 # BR2_PACKAGE_DRBD_UTILS is not set
-# BR2_PACKAGE_DROPBEAR is not set
+BR2_PACKAGE_DROPBEAR=y
+BR2_PACKAGE_DROPBEAR_CLIENT=y
+# BR2_PACKAGE_DROPBEAR_DISABLE_REVERSEDNS is not set
+BR2_PACKAGE_DROPBEAR_SMALL=y
+# BR2_PACKAGE_DROPBEAR_WTMP is not set
+# BR2_PACKAGE_DROPBEAR_LASTLOG is not set
+# BR2_PACKAGE_DROPBEAR_LEGACY_CRYPTO is not set
+BR2_PACKAGE_DROPBEAR_LOCALOPTIONS_FILE=""
 # BR2_PACKAGE_EASYFRAMES is not set
 # BR2_PACKAGE_EBTABLES is not set
 
@@ -2879,7 +3120,7 @@ BR2_PACKAGE_MTR=y
 # NetworkManager needs udev /dev management and a glibc toolchain w/ headers >= 3.2, dynamic library, wchar, threads
 #
 # BR2_PACKAGE_NFACCT is not set
-# BR2_PACKAGE_NFTABLES is not set
+BR2_PACKAGE_NFTABLES=y
 # BR2_PACKAGE_NGINX is not set
 # BR2_PACKAGE_NGIRCD is not set
 BR2_PACKAGE_NGREP=y
@@ -2996,14 +3237,15 @@ BR2_PACKAGE_SOCAT=y
 # BR2_PACKAGE_SQUID is not set
 # BR2_PACKAGE_SSDP_RESPONDER is not set
 # BR2_PACKAGE_SSHGUARD is not set
-# BR2_PACKAGE_SSHPASS is not set
+BR2_PACKAGE_SSHPASS=y
 # BR2_PACKAGE_SSLH is not set
 
 #
 # strongswan needs a toolchain w/ threads, dynamic library
 #
 BR2_PACKAGE_STUNNEL=y
-# BR2_PACKAGE_TCPDUMP is not set
+BR2_PACKAGE_TCPDUMP=y
+# BR2_PACKAGE_TCPDUMP_SMB is not set
 # BR2_PACKAGE_TCPING is not set
 # BR2_PACKAGE_TCPREPLAY is not set
 # BR2_PACKAGE_THTTPD is not set
@@ -3014,7 +3256,7 @@ BR2_PACKAGE_STUNNEL=y
 # BR2_PACKAGE_TINYPROXY is not set
 # BR2_PACKAGE_TINYSSH is not set
 # BR2_PACKAGE_TOR is not set
-# BR2_PACKAGE_TRACEROUTE is not set
+BR2_PACKAGE_TRACEROUTE=y
 # BR2_PACKAGE_TRANSMISSION is not set
 # BR2_PACKAGE_TUNCTL is not set
 
@@ -3061,7 +3303,7 @@ BR2_PACKAGE_STUNNEL=y
 # BR2_PACKAGE_VSFTPD is not set
 # BR2_PACKAGE_VTUN is not set
 # BR2_PACKAGE_WAVEMON is not set
-# BR2_PACKAGE_WIREGUARD_TOOLS is not set
+BR2_PACKAGE_WIREGUARD_TOOLS=y
 # BR2_PACKAGE_WIRELESS_REGDB is not set
 # BR2_PACKAGE_WIRELESS_TOOLS is not set
 
