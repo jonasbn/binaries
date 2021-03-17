@@ -30,7 +30,7 @@ deploy() {
     arch="$1"
     tarball="$arch-$(date +%F).tar.gz"
 
-    rsync -e "ssh -o VerifyHostKeyDNS=yes -o StrictHostKeyChecking=accept-new" -rP --delete "$FOLDER/output/target/" "deploy@batuu.sevenbyte.org:binaries.rumpelsepp.org/$arch"
+    rsync -e "ssh -o VerifyHostKeyDNS=yes -o StrictHostKeyChecking=accept-new" -rP --delete "$FOLDER/output/target/" "deploy@batuu.sevenbyte.org:binaries.rumpelsepp.org/binaries/$arch"
 
     tar czf "$tarball" "$FOLDER/output/target"
     rsync -e "ssh -o VerifyHostKeyDNS=yes -o StrictHostKeyChecking=accept-new" -rP "$tarball" "deploy@batuu.sevenbyte.org:binaries.rumpelsepp.org/"
