@@ -31,7 +31,7 @@ deploy() {
     dir="$(mktemp -d)"
 
     find "$FOLDER/output/target" -type f -executable -exec cp '{}' "$dir/" \;
-    rsync -e "ssh -o VerifyHostKeyDNS=yes -o StrictHostKeyChecking=accept-new" -rP --delete "$dir/" "deploy@batuu.sevenbyte.org:binaries.rumpelsepp.org/binaries/$arch"
+    rsync -e "ssh -o VerifyHostKeyDNS=yes -o StrictHostKeyChecking=accept-new" -rP --delete "$dir/" "deploy@tatooine.sevenbyte.org:binaries.rumpelsepp.org/binaries/$arch"
 
     rm -rf "$dir"
 }
