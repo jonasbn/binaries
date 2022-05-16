@@ -2,21 +2,25 @@
 
 set -eu
 
-VERSION="2022.02.01"
+VERSION="2022.02.1"
 FOLDER="buildroot-$VERSION"
-DOWNLOAD_URL="https://buildroot.org/downloads/buildroot-$VERSION.tar.gz"
+URL="https://github.com/buildroot/buildroot"
 
-getbuildroot() {
-    curl -LO "$DOWNLOAD_URL"
-    tar xf "$(basename $DOWNLOAD_URL)"
+pull_or_clone() {
+	if [[ ! -d "$FOLDER" ]]; then
+		git clone "$URL" "$FOLDER"
+	else
+		git -C "$FOLDER" checkout master
+		git -C "$FOLDER" pull
+	fi
+
+	git -C "$FOLDER" checkout "$VERSION"
 }
 
 build() {
     local arch="$1"
 
-    if [[ ! -d "$FOLDER" ]]; then
-        getbuildroot
-    fi
+	pull_or_clone
 
     cp "config-$arch" "$FOLDER/.config"
     cd "$FOLDER"
@@ -31,7 +35,7 @@ deploy() {
     dir="$(mktemp -d)"
 
     find "$FOLDER/output/target" -type f -executable -exec cp '{}' "$dir/" \;
-    rsync -e "ssh -o VerifyHostKeyDNS=yes -o StrictHostKeyChecking=accept-new" -rP --delete "$dir/" "deploy@tatooine.sevenbyte.org:binaries.rumpelsepp.org/binaries/$arch"
+    rsync -e "ssh" -rP --delete "$dir/" "deploy@tatooine.sevenbyte.org:binaries.rumpelsepp.org/binaries/$arch"
 
     rm -rf "$dir"
 }
@@ -49,11 +53,11 @@ usage() {
     echo "  -h       Show this page and exit"
 }
 
-while getopts "b:d:gh" arg; do
+while getopts "b:d:ph" arg; do
     case "$arg" in
         b) build  "$OPTARG";;
         d) deploy "$OPTARG";;
-        g) getbuildroot;;
+        p) pull_or_clone;;
         h) usage && exit 0;;
         *) usage && exit 1;;
     esac
