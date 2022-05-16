@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -eu
 
-VERSION="2021.02"
+VERSION="2022.02.01"
 FOLDER="buildroot-$VERSION"
 DOWNLOAD_URL="https://buildroot.org/downloads/buildroot-$VERSION.tar.gz"
 
